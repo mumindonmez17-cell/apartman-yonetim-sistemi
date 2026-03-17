@@ -1,0 +1,174 @@
+/* Professional Design System for APARTMAN YÖNETİM YAZILIMI */
+:root {
+    --primary-gradient: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+    --surface-glass: rgba(255, 255, 255, 0.8);
+    --border-glass: rgba(255, 255, 255, 0.4);
+    --shadow-premium: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --sidebar-bg: #0f172a;
+    --accent-color: #4cc9f0;
+}
+
+/* PC Specific Enhancements */
+@media (min-width: 992px) {
+    body {
+        background: radial-gradient(circle at top right, #f8fafc, #eff6ff);
+        color: #334155;
+    }
+
+    /* Sidebar Refinement */
+    .sidebar {
+        background: var(--sidebar-bg) !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar-header {
+        padding: 35px 25px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0.05), transparent);
+    }
+
+    .sidebar .nav-link {
+        margin: 4px 15px;
+        border-radius: 12px;
+        padding: 12px 20px;
+        border: none !important;
+    }
+
+    .sidebar .nav-link:hover {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .sidebar .nav-link.active {
+        background: #4361ee;
+        box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+        color: #fff !important;
+    }
+
+    /* Main Content & Navbar */
+    .main-content {
+        padding: 40px;
+    }
+
+    .navbar {
+        background: #ffffff !important;
+        border: 1px solid var(--border-glass);
+        box-shadow: var(--shadow-premium);
+        padding: 15px 30px !important;
+    }
+
+    /* Cards */
+    .card {
+        background: #ffffff;
+        border: 1px solid var(--border-glass) !important;
+        box-shadow: var(--shadow-premium);
+    }
+
+    .card:hover {
+        box-shadow: var(--shadow-premium);
+    }
+
+    /* Stat Cards */
+    .stat-card .icon-box {
+        background: #4361ee;
+        color: #fff;
+        box-shadow: 0 8px 20px rgba(67, 97, 238, 0.2);
+    }
+
+    /* Buttons */
+    .btn-primary {
+        background: #4361ee;
+        border: none;
+        box-shadow: 0 4px 14px rgba(67, 97, 238, 0.4);
+    }
+
+    .btn-primary:hover {
+        box-shadow: 0 4px 14px rgba(67, 97, 238, 0.4);
+    }
+
+    /* DataTables / Tables Refinement on PC */
+    .table {
+        border-collapse: separate;
+        border-spacing: 0 8px;
+    }
+
+    .table tr {
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        border-radius: 10px;
+    }
+
+    .table td, .table th {
+        padding: 18px 20px !important;
+        border: none !important;
+    }
+
+    /* Tables / Badges / Utilities */
+    .table thead th {
+        background: rgba(0, 0, 0, 0.02);
+        color: #64748b;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        padding: 20px !important;
+    }
+
+    .premium-badge {
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.75rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .badge-tenant { background: rgba(76, 201, 240, 0.1); color: #4cc9f0; border: 1px solid rgba(76, 201, 240, 0.2); }
+    .badge-owner { background: rgba(67, 97, 238, 0.1); color: #4361ee; border: 1px solid rgba(67, 97, 238, 0.2); }
+    .badge-block { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+
+    /* Page Header */
+    .page-header-box {
+        padding: 30px;
+        background: #ffffff;
+        border: 1px solid var(--border-glass);
+        border-radius: 20px;
+        margin-bottom: 35px;
+        box-shadow: var(--shadow-premium);
+    }
+
+    /* Modal Styling */
+    .modal-content {
+        border-radius: 24px !important;
+        overflow: hidden;
+    }
+
+    .modal-header {
+        background: #f8fafc;
+        border-bottom: 1px solid #f1f5f9;
+        padding: 25px 30px;
+    }
+
+    .modal-footer {
+        padding: 20px 30px;
+        background: #f8fafc;
+        border-top: 1px solid #f1f5f9;
+    }
+
+    /* Empty State */
+    .empty-state {
+        padding: 60px 20px;
+        text-align: center;
+        color: #94a3b8;
+    }
+
+    .empty-state i {
+        font-size: 4rem;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+        opacity: 0.5;
+    }
+}
